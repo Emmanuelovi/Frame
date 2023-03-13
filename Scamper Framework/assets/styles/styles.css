@@ -12,19 +12,6 @@
     Raygoza De León Martín
 */
 
-/* 
-@import "button.css";
-@import "form.css";
-@import "sidebar.css";
-*/
-button img {
-    position: relative;
-    top: 1px;
-    right:  -1px;
-    width: 20px;
-    height: 20px;
-}
-
 @font-face {
     font-family: Titles;
     src: url(../fonts/RobotoMono-Regular.ttf);
@@ -67,6 +54,8 @@ body{
     position: relative;
     padding-bottom: 15vh;
     min-height: 100vh;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 main{
     grid-area: main;
@@ -74,27 +63,18 @@ main{
     padding-right: 5vw;
 }
 
-/* MEDIA QUERIES */
-/* Desktop */
-@media screen and (min-width: 1366px){
-    /* FALTA */
-}
-
-/* Tablet */
-@media screen and (min-width: 720px) and (max-width: 1365px){
-    /* FALTA */
-}
-
-/* Smartphone */
-@media screen and (max-width: 719px){
-    /* FALTA */
-}
-
 /* ------------ SEPARADOR -------------- */
+button img {
+    position: relative;
+    top: 1px;
+    right:  -1px;
+    width: 20px;
+    height: 20px;
+}
 /* Header */
 header{
     width: 100vw;
-    padding: 3vh;
+    padding: 3.5vh;
     position: absolute;
     top: 0;
     text-align: right;
@@ -114,12 +94,12 @@ nav ul li a{
     text-decoration: none;
     color: var(--base);
     font-size: 1.30em;
-    border-radius: 5px;
-    transition: background-color 1s, color 0.5s;
+    border-bottom: 3px solid transparent;
+    transition: 0.6s border-bottom;
 }
+
 nav ul li a:hover{
-    background-color: var(--primary);
-    color: var(--base);
+    border-bottom: 3px solid var(--primary);
 }
 
 .logo_nombre{
@@ -128,6 +108,7 @@ nav ul li a:hover{
     position: absolute;
     top: 10px;
     left: 90px;
+    transition: 0.30s;
 }
 
 /* Footer */
@@ -148,18 +129,6 @@ footer p{
     font-style: oblique;
 }
 
-/* Sidebar */
-/* aside{
-    width: 15vw;
-    padding: 10px;
-    position: sticky;
-    z-index: -1;
-    top: 0;
-    background-color: var(--complement);
-    color: var(--base);
-    grid-area: sidebar;
-} */
-
 /* Resto */
 .titulos{
     padding-bottom: 20px;
@@ -176,17 +145,25 @@ article p{
     font-size: var(--fsize);
 }
 
+.resaltarIcono {
+    transition: 0.5s;
+}
+
+.resaltarIcono:hover {
+    transform: scale(1.2);
+}
+
 /* Modo oscuro */
-body.dark-mode {
+body.dark-mode{
     background-color: var(--complement); /* color de fondo en modo oscuro */
     transition: background-color 1s;
     color: var(--base); /* color de texto en modo oscuro */
 }
-aside.dark-mode {
+aside.dark-mode{
     background-color: var(--primary);
     transition: background-color 1s;
 }
-header.dark-mode {
+header.dark-mode{
     background-color: var(--primary);
     transition: background-color 1s;
 }
@@ -196,7 +173,15 @@ header.dark-mode {
     transition: background-color 1s;
 }
 
-/*Usetedes copien de aquí en adelante*/
+.dark-mode .resaltarIcono{
+    transition: 0.5s;
+}
+
+.dark-mode nav ul li a:hover{
+    border-bottom: 3px solid var(--complement);
+}
+
+/* Boton animado para el Dark-Mode*/
 .dark_mode--slide_area{
     width: 50px;
     height: 25px;
@@ -204,8 +189,12 @@ header.dark-mode {
     border-radius: 16px;
     border: 2px solid black;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     float: right;
     transition: background-color .7s;
+    cursor: pointer;
 }
 
 .light_mode--slide_area{
@@ -215,8 +204,12 @@ header.dark-mode {
     border-radius: 16px;
     border: 2px solid black;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     float: right;
     transition: background-color .7s;
+    cursor: pointer;
 }
 
 .dark_mode--btn{
@@ -242,4 +235,44 @@ header.dark-mode {
     color: white;
     cursor: pointer;
     transition: background-color .7s, margin .7s;
+}
+
+/* Botones para activar modulos flotantes */
+
+
+
+.float_mod{
+    display: inline-block;
+}
+.Modulos_flot{
+    position:relative;
+    top:50px;
+    margin: 20px;
+    padding: 10px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    color: var(--terciary);
+    background-color: var(--primary);
+    border-radius: 10px;
+}
+
+.Modulos_flot:hover{
+    cursor: pointer;
+
+}
+
+/* MEDIA QUERIES */
+/* Desktop */
+@media screen and (min-width: 1366px){
+    /* FALTA */
+}
+
+/* Tablet */
+@media screen and (min-width: 720px) and (max-width: 1365px){
+    /* FALTA */
+}
+
+/* Smartphone */
+@media screen and (max-width: 719px){
+    /* FALTA */
 }

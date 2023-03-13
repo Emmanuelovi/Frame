@@ -1,0 +1,97 @@
+.pant_gral_mod{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,0.5);
+    z-index: 2;
+}
+
+.oculto_mod{
+    display: none;
+}
+
+.cuadro1_mod{
+    width: 30vw;
+    height: 20vh;
+    position: relative;
+    top:40vh;
+    left:35vw;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 0 30px black;
+}
+.btn1_mod{
+    position: inherit;
+    left: 95%;
+    top: 5%;
+}
+.btn1_mod:hover{
+    cursor: pointer;
+}
+
+.p_mod_1{
+    position: inherit;
+    text-align: center;
+    top:20%
+}
+
+.cuadro2_mod{
+    width: 40vw;
+    height: 10vh;
+    position: relative;
+    top:0;
+    left:30vw;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 0 30px black;
+    display: flex;
+}
+
+.btn2_mod{
+    color: red;
+    font-size: 20pt;
+    position: inherit;
+    left: 90%;
+    top: 30%;
+}
+.btn2_mod:hover{
+    cursor: pointer;
+}
+
+.p_mod_2{
+    position: inherit;
+    font-size: 14pt;
+    top: 1.5vh;
+    left: 5%;
+    
+}
+
+.cuadro3_mod{
+    width: 40vw;
+    height: 40vh;
+    position: relative;
+    top:60vh;
+    left:30vw;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 0 30px black;
+    display: flex;
+}
+
+.btn3_mod{
+    color: green;
+    font-size: 25pt;
+    position: inherit;
+    left: 90%;
+    top: 40%;
+}
+.btn3_mod:hover{
+    cursor: pointer;
+}
+.p_mod_3{
+    position: inherit;
+    height: 100%;
+    width: 80%;
+}

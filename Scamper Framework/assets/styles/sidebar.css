@@ -13,42 +13,132 @@
 */
 .sidebar{
     height: 100vh;
-    width: 55px;
+    width: 60px;
     position: fixed;
     top: 0;
     z-index: 1;
     align-items: start;
+    overflow-x: auto;
+    scroll-margin-inline-end: 10px;
     background-color:var(--complement);
     transition: background-color 1s;
     /* left:-60px; OCULTAR BARRA*/
 }
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+    height: 150%;
+    background-color: var(--secondary);
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+    background-color: var(--primary);
+}
+
+.sidebar_ext{
+    width: 200px;
+}
+
 aside .logo{
     border-radius: 25px;
     display: block;
-    margin: 10px auto;
+    margin: 20px auto;
+    margin-bottom: 40px;
     padding: 7px;
     height: 45px;
     width: 45px;
     max-width: 100%;
     background-color: var(--primary);
 }
-aside .logo:hover{
+
+.sidebar .logo:hover{
     cursor: pointer;
 }
-aside ul li{
-    width: 100%;
+.sidebar ul li{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
     height: 25px;
+    max-height: 25px;
     color: white;
-    margin-top: 20px;
-    text-align: center;
-}
-aside ul li img{
-    width: 25px;
-    height: 25px;
-    color: white;
-    text-align: center;
-}
-aside ul li img:hover{
-    cursor: pointer;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    list-style: none;
 }
 
+.sidebar ul li a{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    height: 25px;
+    max-height: 25px;
+    color: white;
+    text-decoration: none;
+}
+
+.Abierto{
+    display: flex;
+    padding-left: 10px;
+    max-width: 80%;
+    justify-content: center;
+    flex-direction: column;
+}
+.oculto{
+    display: none;
+}
+
+.sidebar ul li a img{
+    width: 25px;
+    height: 25px;
+    align-items: left;
+    color: white;
+    text-align: center;
+}
+
+.sidebar ul li a p {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.sidebar ul li:hover{
+    cursor: pointer;
+}
+.sidebar div .toggleBtn{
+    top:15.5%;
+    padding: 5px;
+    background-color: var(--complement);
+    left: 100%;
+    font-size: 25px;
+    color: white;
+    position:absolute;
+}
+.animacion{
+    /* animation: extender 1s timing-function delay iteration-count direction fill-mode; */
+    animation: extender 0.30s;
+}
+.animacion_dis{
+    animation: disminuir 0.30s;
+}
+/* aside div .toggleBtn:hover{
+    cursor: pointer;
+} */
+
+.logo_nombre.reubicar{
+    width: 150px;
+    max-width: 100%;
+    position: absolute;
+    top: 10px;
+    left: 230px;
+    transition: left 0.30s;
+}
+
+@keyframes extender {
+    0%{width: 60px; }
+    100%{width: 200px;}
+}
+
+@keyframes disminuir {
+    0%{width: 200px;}
+    100%{width: 60px; }
+}
