@@ -1,6 +1,7 @@
 const darkModeBtn1 = document.querySelector('#darkModeBtn')
 const darkModeArea = document.querySelector('#darkModeArea')
 const body = document.querySelector('body');
+const menu = document.querySelector("#menu")
 const encabezado = document.querySelector('header');
 darkModeBtn1.addEventListener('click', () => {
     if(darkModeArea.classList[0]=="dark_mode--slide_area"){
@@ -27,3 +28,25 @@ darkModeBtn1.addEventListener('click', () => {
         encabezado.classList.toggle('dark-mode');
     }
 })
+
+/** modificaciones bkackhan */
+const openMenu = () => {
+    menu.attributes.getNamedItem("status").value="open"
+    menu.style.height="190px"
+}
+
+const closeMenu = () => {
+    menu.attributes.getNamedItem("status").value="closed"
+    menu.style.height="0px"
+}
+// ? Hace que el menu se muestre o se oculte en las pantallas de telefono
+document.querySelector("#menu_btn").addEventListener('click',()=>{
+    let status = menu.attributes.getNamedItem("status").value
+    if(status=="closed"){
+        openMenu()
+    }else{
+        closeMenu()
+    }
+})
+
+

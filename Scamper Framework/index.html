@@ -23,22 +23,29 @@
     <link rel="shortcut icon" href="assets/img/solo_logo.png">
     <title>Scamper Framework</title>
 </head>
-<body>
+<body onload="renderInicio()">
     
     <header>
-        <img src="assets/img/solo_nombre.png" id="logo_nombre" class="logo_nombre">
-        <nav>
-            <ul>
-                <li><a href="inicio.html">Inicio</a></li>
-                <li><a href="index.html">Componentes</a></li>
+        <div class="logo_nombre--contenedor">
+            <img src="assets/img/solo_nombre.png" id="logo_nombre" class="logo_nombre">
+        </div>
+        <nav class="menu--contenedor">
+            <ul class="menu" id="menu" status="closed">
+                <li><a onclick="renderInicio()">Inicio</a></li>
+                <li><a onclick="renderIndex()">Componentes</a></li>
                 <li><a href="">Descargar</a></li>
                 <li><a href="">Contacto</a></li>
-                <div class="dark_mode--slide_area" id="darkModeArea">
+                <li></li><div class="dark_mode--slide_area" id="darkModeArea">
                     <button class="dark_mode--btn" id="darkModeBtn"><img src="assets/icons/dark-mode.svg"></button>
-                </div>
+                </div></li>
                 <!-- <button id="darkmodeBtn"  class="switch active"><img src="assets/icons/dark-mode.svg"></button> -->
             </ul>
         </nav>
+        <div class="menu_btn--contenedor">
+            <button id="menu_btn">
+                Abrir Menu
+            </button>
+        </div>
     </header>
 
     <aside id="sidebar" class="sidebar">
@@ -54,52 +61,17 @@
         </ul>
     </aside>
 
-    <main>
-        <div class="container">
-            <section id="introduccion">
-                <h2 class="titulos">Introducción</h2>
-                <article>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque libero excepturi impedit, ea blanditiis provident eligendi nisi minima enim dignissimos corrupti accusamus reprehenderit eveniet iusto natus quibusdam distinctio magni voluptate.</p>
-                    <p>Ea ullam iure nemo rem deleniti. Animi libero dicta quis quas quae magni beatae, placeat obcaecati explicabo, itaque ducimus perspiciatis laudantium necessitatibus ea minus modi rem non sunt. Soluta, ipsa!</p>
-                    <p>Nulla corrupti officiis laboriosam laborum nemo soluta esse aliquam. Sed voluptatum nobis expedita placeat a odit necessitatibus veniam consequatur, quis eligendi facilis, laudantium fugiat voluptate fugit, dicta veritatis ipsam quisquam!</p>
-                </article>
-            </section>
-
-            <section id="requerimientos">
-                <h2 class="titulos">Requerimientos</h2>
-                <article>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque libero excepturi impedit, ea blanditiis provident eligendi nisi minima enim dignissimos corrupti accusamus reprehenderit eveniet iusto natus quibusdam distinctio magni voluptate.</p>
-                    <p>Ea ullam iure nemo rem deleniti. Animi libero dicta quis quas quae magni beatae, placeat obcaecati explicabo, itaque ducimus perspiciatis laudantium necessitatibus ea minus modi rem non sunt. Soluta, ipsa!</p>
-                    <p>Nulla corrupti officiis laboriosam laborum nemo soluta esse aliquam. Sed voluptatum nobis expedita placeat a odit necessitatibus veniam consequatur, quis eligendi facilis, laudantium fugiat voluptate fugit, dicta veritatis ipsam quisquam!</p>
-                </article>
-            </section>
-
-            <section id="encabezados">
-                <h2 class="titulos">Encabezados</h2>
-                <article>
-                    <h1>Titulo 1</h1>
-                    <h2>Titulo 2</h2>
-                    <h3>Titulo 3</h3>
-                    <h4>Titulo 4</h4>
-                    <h5>Titulo 5</h5>
-                    <h6>Titulo 6</h6>
-                </article>
-            </section>
-
-            <section id="botones">
-                <h2 class="titulos">Botones</h2>
-
-            </section>
-
-        </div>
-
+    <main id="myApp">
+       <!-- aqui va todo el contenido renderizado desde el javascript.-->
     </main>
 
     <footer>
         <p>&copy; Copyright 2023 Engineers Inc. All rights reserved</p>
     </footer>
 
-    <script src="assets/scripts/script.js"></script>
+    <script src="assets/scripts/scriptInicio.js"></script>
+    <script src="assets/scripts/renderIndex.js"></script>
+    <script src="assets/scripts/renderInicio.js"></script>
 
 </body>
 </html>

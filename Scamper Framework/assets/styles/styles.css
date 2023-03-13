@@ -93,9 +93,11 @@ main{
 /* ------------ SEPARADOR -------------- */
 /* Header */
 header{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
     width: 100vw;
     padding: 3vh;
-    position: absolute;
     top: 0;
     text-align: right;
     background-color: var(--complement);
@@ -103,6 +105,7 @@ header{
     color: var(--base);
     grid-area: header;
 }
+
 header h1{
     margin-bottom: 15px;
 }
@@ -117,17 +120,20 @@ nav ul li a{
     border-radius: 5px;
     transition: background-color 1s, color 0.5s;
 }
+
+a{
+    cursor: pointer;
+}
 nav ul li a:hover{
     background-color: var(--primary);
+    filter: brightness(85%);
     color: var(--base);
 }
 
 .logo_nombre{
     width: 150px;
-    max-width: 100%;
-    position: absolute;
-    top: 10px;
-    left: 90px;
+    position: relative;
+    margin-left: 30px;
 }
 
 /* Footer */
@@ -161,6 +167,7 @@ footer p{
 } */
 
 /* Resto */
+
 .titulos{
     padding-bottom: 20px;
     padding-top: 20px;
@@ -221,11 +228,11 @@ header.dark-mode {
 
 .dark_mode--btn{
     background-color: slategray;
-    width: 30px;
+    width: 25px;
     height: 25px;
     border-radius: 50%;
     border: none;
-    margin:  0 100% 0 0;
+    margin:  0 100% 2px 0;
     font-weight: bold;
     cursor: pointer;
     transition: background-color .7s, margin .7s;
@@ -233,7 +240,7 @@ header.dark-mode {
 
 .light_mode--btn{
     background-color: blue;
-    width: 30px;
+    width: 25px;
     height: 25px;
     border-radius: 50%;
     border: none;
@@ -242,4 +249,59 @@ header.dark-mode {
     color: white;
     cursor: pointer;
     transition: background-color .7s, margin .7s;
+}
+
+/*** Nuevas modificaciones bkackhan ***/
+
+.logo_nombre--contenedor{
+    display: flex;
+    justify-content: start;
+    margin-bottom: 10px;
+}
+
+
+.menu--cerrado{
+    height: 0px;
+    overflow: hidden;
+    transition: height 1s;
+}
+
+.menu_btn--contenedor{
+    display: none;
+}
+
+@media(max-width:710px){
+    .menu_btn--contenedor{
+        display: block;
+        display: flex;
+        justify-content: center;
+    }
+
+    header{
+        flex-direction: column;
+    }
+
+    .logo_nombre--contenedor{
+        justify-content: center;
+    }
+
+    .menu_boton--contenedor{
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo_nombre{
+        margin: 0;
+    }
+
+    .menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 0px;
+        margin: 0 auto;
+        overflow: hidden;
+        transition: height 1s;
+    }
 }
