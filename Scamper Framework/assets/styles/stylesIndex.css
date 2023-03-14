@@ -85,7 +85,10 @@ img{
 
 header .logo{
     border-radius: 25px;
+<<<<<<< Updated upstream
     display: block;
+=======
+>>>>>>> Stashed changes
     float: left;
     height: 50px;
     width: 50px;

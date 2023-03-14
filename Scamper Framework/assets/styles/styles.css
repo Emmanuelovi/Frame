@@ -99,7 +99,13 @@ nav ul li a{
 }
 
 nav ul li a:hover{
+<<<<<<< Updated upstream
     border-bottom: 3px solid var(--primary);
+=======
+    cursor: pointer;
+    border-bottom: 3px solid var(--primary);
+    color: var(--secondary);
+>>>>>>> Stashed changes
 }
 
 .logo_nombre{
@@ -114,7 +120,7 @@ nav ul li a:hover{
 /* Footer */
 footer{
     width: 100vw;
-    padding: 5vh;
+    padding: 2vh;
     text-align: center;
     background-color: var(--primary);
     transition: background-color 1s;
@@ -127,6 +133,7 @@ footer{
 footer p{
     font-size: var(--fsize);
     font-style: oblique;
+    padding-top: 0.5%;
 }
 
 /* Resto */
@@ -145,11 +152,30 @@ article p{
     font-size: var(--fsize);
 }
 
+<<<<<<< Updated upstream
 .resaltarIcono {
     transition: 0.5s;
 }
 
 .resaltarIcono:hover {
+=======
+p{
+    font-family: Texts;
+}
+
+.iconos_footer img{
+    display: inline-block;
+    width: 5%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.resaltarIconoFooter {
+    transition: 0.5s;
+}
+
+.resaltarIconoFooter:hover {
+>>>>>>> Stashed changes
     transform: scale(1.2);
 }
 
@@ -238,6 +264,63 @@ header.dark-mode{
 }
 
 /* Botones para activar modulos flotantes */
+<<<<<<< Updated upstream
+=======
+.float_mod{
+    display: inline-block;
+}
+.Modulos_flot{
+    position:relative;
+    top:50px;
+    margin: 20px;
+    padding: 10px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    color: var(--terciary);
+    background-color: var(--primary);
+    border-radius: 10px;
+}
+
+.Modulos_flot:hover{
+    cursor: pointer;
+}
+
+/* SEPARADOR */
+h1{
+    font-size: 2.5em;
+}
+h2{
+    font-size: 2em;
+}
+h3{
+    font-size: 1.75em;
+}
+h4{
+    font-size: 1.5em;
+}
+h5{
+    font-size: 1.25em;
+}
+h6{
+    font-size: 1em;
+}
+
+#titles{
+    font-family: Titles;
+}
+#texts{
+    font-family: Texts;
+}
+#buttons{
+    font-family: Buttons;
+}
+
+/* MEDIA QUERIES */
+/* Desktop */
+
+
+
+>>>>>>> Stashed changes
 
 
 

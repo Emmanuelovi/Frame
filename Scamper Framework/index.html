@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles/styles.css">
     <link rel="stylesheet" href="assets/styles/stylesIndex.css">
+<<<<<<< Updated upstream
     <link rel="shortcut icon" href="assets/img/solo_logo.png">
     <title>Scamper Framework</title>
 </head>
@@ -97,6 +98,119 @@
     </footer>
 
     <script src="assets/scripts/script.js"></script>
+=======
+    <link rel="stylesheet" href="assets/styles/sidebar.css">
+    <link rel="stylesheet" href="assets/icons/style_modales_fonts.css">
+    <link rel="stylesheet" href="assets/styles/styles_modales.css">
+    <link rel="shortcut icon" href="assets/img/solo_logo.png">
+    <title>Scamper Framework</title>
+</head>
+<body onload="renderInicio()">
+    
+    <header>
+        <div class="logo_nombre--contenedor">
+            <img src="assets/img/solo_logo.png" id="logo" alt="15px" class = "logo oculto">
+            <img src="assets/img/solo_nombre.png" id="logo_nombre" class="logo_nombre">
+        </div>
+        <nav class="menu--contenedor">
+            <ul class="menu" id="menu" status="closed">
+                <li><a onclick="renderInicio()">Inicio</a></li>
+                <li><a onclick="renderIndex()">Componentes</a></li>
+                <li><a href="">Descargar</a></li>
+                <li><a href="">Contacto</a></li>
+                <li></li><div class="dark_mode--slide_area" id="darkModeArea">
+                    <button class="dark_mode--btn" id="darkModeBtn"><img src="assets/icons/dark-mode.svg"></button>
+                </div></li>
+                <!-- <button id="darkmodeBtn"  class="switch active"><img src="assets/icons/dark-mode.svg"></button> -->
+            </ul>
+        </nav>
+        <div class="menu_btn--contenedor">
+            <button id="menu_btn">
+                Abrir Menu
+            </button>
+        </div>
+    </header>
+    
+    <aside id="sidebar" class="sidebar oculto">
+        <img src="assets/img/solo_logo.png" id="button_side" alt="" class="resaltarIcono logo">
+        <ul>
+            <li class="resaltarIcono">
+                <a href="#"> 
+                    <img src="assets/icons/titulo.svg" alt="">
+                    <p class = "txtOpc" >Encabezados</p>
+                </a>
+            </li>
+            <li class="resaltarIcono">
+                <a href="#"> 
+                    <img src="assets/icons/tipografia.svg" alt="">
+                    <p class = "txtOpc">Tipografía</p>
+                </a>
+            </li>
+            <li class="resaltarIcono">
+                <a href="#">
+                    <img src="assets/icons/paleta.svg" alt="">
+                    <p class = "txtOpc">Paleta de colores</p>
+                </a>
+            </li>
+            <li class="resaltarIcono">
+                <a href="#">
+                    <img src="assets/icons/boton.svg" alt=""> 
+                    <p class = "txtOpc">Botones</p>
+                </a>
+            </li>
+            <li class="resaltarIcono">
+                <a href="#">
+                    <img src="assets/icons/header-footer.svg" alt="">
+                    <p class = "txtOpc">Header - Footer</p>
+                </a>
+            </li>
+            <li class="resaltarIcono">
+                <a href="#">
+                    <img src="assets/icons/sidebar.svg" alt="">
+                    <p class = "txtOpc">Sidebar</p>
+                </a>
+            </li>
+            <li class="resaltarIcono">
+                <a href="#">
+                    <img src="assets/icons/formulario.svg" alt="">
+                    <p class = "txtOpc">Formularios</p>
+                </a>
+            </li>
+            <li class="resaltarIcono">
+                <a href="#">
+                    <img src="assets/icons/modal.svg" alt="">
+                    <p class = "txtOpc">Modales</p>
+                </a>
+            </li>
+            <li class="resaltarIcono">
+                <a href="#">
+                    <img src="assets/icons/icono.svg" alt="">
+                    <p class = "txtOpc">Iconos</p>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <main id="myApp">
+        <!-- aqui va todo el contenido renderizado desde el javascript.-->
+     </main>
+
+    <footer>
+        <div class="iconos_footer">
+            <a href="https://www.facebook.com/"><img src="assets/icons/facebook.svg" alt="" class="resaltarIconoFooter"></a>
+            <a href="https://www.instagram.com/"><img src="assets/icons/instagram.svg" alt="" class="resaltarIconoFooter"></a>
+            <a href="https://www.twitter.com/"><img src="assets/icons/twitter.svg" alt="" class="resaltarIconoFooter"></a>
+            <a href="https://www.github.com/"><img src="assets/icons/github.svg" alt="" class="resaltarIconoFooter"></a>
+        </div>
+        <p>&copy; Copyright 2023 Engineers Inc. All rights reserved</p>
+    </footer>
+    
+    <script src="assets/scripts/aside.js"></script>
+    <script src="assets/scripts/script.js"></script>
+    <script src="assets/scripts/renderIndex.js"></script>
+    <script src="assets/scripts/renderComponentes.js"></script>
+    <script src="assets/scripts/script_modal.js"></script>
+>>>>>>> Stashed changes
     
 </body>
 </html>

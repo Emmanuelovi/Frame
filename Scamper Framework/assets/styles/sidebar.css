@@ -133,6 +133,17 @@ aside .logo{
     transition: left 0.30s;
 }
 
+<<<<<<< Updated upstream
+=======
+.resaltarIcono {
+    transition: 0.5s;
+}
+
+.resaltarIcono:hover {
+    transform: scale(1.1);
+}
+
+>>>>>>> Stashed changes
 @keyframes extender {
     0%{width: 60px; }
     100%{width: 200px;}

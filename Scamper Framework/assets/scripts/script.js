@@ -37,8 +37,34 @@ darkModeArea.addEventListener('click', () => {
             sidebar.classList.toggle('dark-mode');
             icono.classList.toggle('dark-mode');
         }
+<<<<<<< Updated upstream
+=======
+    }
+})
+
+/** modificaciones bkackhan */
+const openMenu = () => {
+    menu.attributes.getNamedItem("status").value="open"
+    menu.style.height="190px"
+}
+
+const closeMenu = () => {
+    menu.attributes.getNamedItem("status").value="closed"
+    menu.style.height="0px"
+}
+// ? Hace que el menu se muestre o se oculte en las pantallas de telefono
+document.querySelector("#menu_btn").addEventListener('click',()=>{
+    let status = menu.attributes.getNamedItem("status").value
+    if(status=="closed"){
+        openMenu()
+    }else{
+        closeMenu()
+>>>>>>> Stashed changes
     }
 })
 
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
