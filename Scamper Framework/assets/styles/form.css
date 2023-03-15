@@ -12,4 +12,84 @@
     Raygoza De León Martín
 */
 
-
+:root{
+    --primary: #159A9C;
+    --secondary: #B4BEC9;
+    --terciary: #DEEFE7;
+    --complemet: #002333;
+    --base: #FFFFFF;
+    --fsize: 16px;
+  }
+  
+  label{
+      display: block;
+      margin-bottom: 15px; /* separación debajo del texto*/
+      margin-top: 15px; /* separación arriba del texto*/
+      color: black;
+      border-radius: 8px; 
+  }
+  
+  select{
+    color: #333;
+    border: 3px solid var(--complemet);
+    background-color: var(--terciary);
+    border-radius: 8px; 
+  }
+  button{
+    color: #333;
+    border: 4px solid var(--complemet);
+    background-color: var(--terciary);
+    border-radius: 8px; 
+  }
+  
+  input{
+    color: #333;
+    border: 3px solid var(--complemet);
+    background-color: var(--terciary);
+    border-radius: 8px; 
+  }
+  
+  #TextArea1 {
+      border: 3px solid var(--complemet);
+      border-radius: 8px; 
+      background-color: var(--terciary);
+      color: #333;
+      overflow-y: scroll;
+      scrollbar-width: thin;
+      resize: vertical; 
+      overflow: hidden;
+    }
+    
+    @keyframes cambio_de_color {
+      0% {
+        border-color: black;
+      }
+      25% {
+        border-color: #159A9C;
+      }
+      50% {
+        border-color: #FFFFFF;
+      }
+      75% {
+        border-color: cyan;
+      }
+      100% {
+        border-color: #B4BEC9;
+      }
+    }
+  
+    #TextArea1:focus{
+       outline: none; 
+       animation: cambio_de_color 8s linear infinite;
+    }
+    #TextArea1:hover{
+      overflow: auto; /*solo muestra el scrollbar si es necesario*/
+    }
+    .fondo{
+      background-color: #FFFFFF;
+    }
+  
+    .animacionboton {
+      animation-name: pulsacion;
+      animation-duration: 1s;
+    }
