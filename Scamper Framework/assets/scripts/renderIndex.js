@@ -70,10 +70,18 @@ const inicioContent = `
 const renderInicio = () => {
     var sidebar = document.getElementById("sidebar")
     var logo = document.getElementById("logo");
+    const icono = document.getElementById('logo_nombre');
+    // Validar que el logo del nombre se ubique segun sea
+    if(icono.classList.contains("reubicar"))
+    {
+        icono.classList.remove("reubicar");
+    }
+    // Mostrar el logo cuando estamos en la pagina de inicio
     if(logo.classList.contains("oculto"))
     {
         logo.classList.remove("oculto");   
     }
+    // Quitar el sidebar cuando estamos en la pagina de inicio
     if(!sidebar.classList.contains("oculto"))
     {
         sidebar.classList.add("oculto");

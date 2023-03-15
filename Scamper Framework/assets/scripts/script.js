@@ -37,8 +37,6 @@ darkModeArea.addEventListener('click', () => {
             sidebar.classList.toggle('dark-mode');
             icono.classList.toggle('dark-mode');
         }
-<<<<<<< Updated upstream
-=======
     }
 })
 
@@ -59,12 +57,7 @@ document.querySelector("#menu_btn").addEventListener('click',()=>{
         openMenu()
     }else{
         closeMenu()
->>>>>>> Stashed changes
     }
 })
 
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes

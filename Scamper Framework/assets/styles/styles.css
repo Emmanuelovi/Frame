@@ -99,13 +99,9 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-<<<<<<< Updated upstream
-    border-bottom: 3px solid var(--primary);
-=======
     cursor: pointer;
     border-bottom: 3px solid var(--primary);
     color: var(--secondary);
->>>>>>> Stashed changes
 }
 
 .logo_nombre{
@@ -152,13 +148,6 @@ article p{
     font-size: var(--fsize);
 }
 
-<<<<<<< Updated upstream
-.resaltarIcono {
-    transition: 0.5s;
-}
-
-.resaltarIcono:hover {
-=======
 p{
     font-family: Texts;
 }
@@ -175,7 +164,6 @@ p{
 }
 
 .resaltarIconoFooter:hover {
->>>>>>> Stashed changes
     transform: scale(1.2);
 }
 
@@ -264,8 +252,6 @@ header.dark-mode{
 }
 
 /* Botones para activar modulos flotantes */
-<<<<<<< Updated upstream
-=======
 .float_mod{
     display: inline-block;
 }
@@ -320,42 +306,56 @@ h6{
 
 
 
->>>>>>> Stashed changes
 
-
-
-.float_mod{
-    display: inline-block;
-}
-.Modulos_flot{
-    position:relative;
-    top:50px;
-    margin: 20px;
-    padding: 10px;
-    padding-left: 5vw;
-    padding-right: 5vw;
-    color: var(--terciary);
-    background-color: var(--primary);
-    border-radius: 10px;
+.logo_nombre--contenedor{
+    display: flex;
+    justify-content: start;
+    margin-bottom: 10px;
 }
 
-.Modulos_flot:hover{
-    cursor: pointer;
 
+.menu--cerrado{
+    height: 0px;
+    overflow: hidden;
+    transition: height 1s;
 }
 
-/* MEDIA QUERIES */
-/* Desktop */
-@media screen and (min-width: 1366px){
-    /* FALTA */
+.menu_btn--contenedor{
+    display: none;
 }
 
-/* Tablet */
-@media screen and (min-width: 720px) and (max-width: 1365px){
-    /* FALTA */
-}
+@media(max-width:710px){
+    .menu_btn--contenedor{
+        display: block;
+        display: flex;
+        justify-content: center;
+    }
 
-/* Smartphone */
-@media screen and (max-width: 719px){
-    /* FALTA */
+    header{
+        flex-direction: column;
+    }
+
+    .logo_nombre--contenedor{
+        justify-content: center;
+    }
+
+    .menu_boton--contenedor{
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo_nombre{
+        margin: 0;
+    }
+
+    .menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 0px;
+        margin: 0 auto;
+        overflow: hidden;
+        transition: height 1s;
+    }
 }

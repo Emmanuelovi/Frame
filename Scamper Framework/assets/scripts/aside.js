@@ -2,17 +2,11 @@
     var aside = document.getElementById("sidebar"),
     boton = document.getElementById("button_side"),
     elementos = document.getElementsByClassName("txtOpc"),
-<<<<<<< Updated upstream
-    lista = document.querySelectorAll(".sidebar ul li");
-    const icono = document.getElementById('logo_nombre');
-
-=======
     lista = document.querySelectorAll(".sidebar ul li")
     principal = document.querySelector("main");
     const icono = document.getElementById('logo_nombre');
     principal.addEventListener("click", comprimir);
     
->>>>>>> Stashed changes
     for(var i =0; i < elementos.length; i++){
         elementos[i].setAttribute("title",elementos[i].innerHTML);
         elementos[i].classList.add("Abierto","oculto");
@@ -20,8 +14,6 @@
     }
 
     boton.addEventListener("click",extender);
-<<<<<<< Updated upstream
-=======
     function comprimir(){
         if(aside.classList.contains("animacion")){
             aside.classList.toggle("animacion");
@@ -43,7 +35,6 @@
             }
         }
     }
->>>>>>> Stashed changes
     function extender(){
         aside.classList.toggle("animacion");
         aside.classList.toggle("sidebar_ext");

@@ -132,12 +132,16 @@ const indexContent = `
 const renderIndex = () => {
     var sidebar = document.getElementById("sidebar")
     var logo = document.getElementById("logo");
+    const icono = document.getElementById('logo_nombre');
+    // Validar que el logo del nombre se ajuste
+    if(sidebar.classList.contains("sidebar_ext")){
+        icono.classList.add("reubicar");
+    }
     if(!logo.classList.contains("oculto"))
     {
         logo.classList.add("oculto");   
     }
-
-
+    // Validar que el sidebar se muestre o se oculte segun corresponda
     if(sidebar.classList.contains("oculto"))
     {
         sidebar.classList.remove("oculto");
